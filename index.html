@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html lang='en'>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Juegos" />
+	<title>Juegos</title>
+	<link rel='stylesheet' href='styles.css' />
+</head>
+<body>
+    <h1 id='main-title' class="title">Funcionalidades basicas con HTML, CSS, y JavaScript</h1>
+<main id="main-page">
+    <section id="calculator-section">
+    <table class="calculator">
+        <tr>
+            <td colspan="3"><input class="box-display" id="resultCalculator" type="text" disabled></td>
+            <td><input type="button" onclick='clearscreen()' id="clearscreen" value="C"></button></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="display('0')"></td>
+            <td><input type="button" value="1" onclick="display('1')"></td>
+            <td><input type="button" value="2" onclick="display('2')"></td>
+            <td><input type="button" value="+" onclick="display('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="3" onclick="display('3')"></td>
+            <td><input type="button" value="4" onclick="display('4')"></td>
+            <td><input type="button" value="5" onclick="display('5')"></td>
+            <td><input type="button" value="-" onclick="display('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="6" onclick="display('6')"></td>
+            <td><input type="button" value="7" onclick="display('7')"></td>
+            <td><input type="button" value="8" onclick="display('8')"></td>
+            <td><input type="button" value="*" onclick="display('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="9" onclick="display('9')"></td>
+            <td><input type="button" value="/" onclick="display('/')"></td>
+            <td><input type="button" value="." onclick="display('.')"></td>
+            <td><input type="button" value="=" onclick="calculate()"></td>
+        </tr>
+        </table>
+</section>
+<section id="tic-tac-toe">
+        <div class="container">
+            <div data-index="0" class="cell"></div>
+            <div data-index="1" class="cell"></div>
+            <div data-index="2" class="cell"></div>
+            <div data-index="3" class="cell"></div>
+            <div data-index="4" class="cell"></div>
+            <div data-index="5" class="cell"></div>
+            <div data-index="6" class="cell"></div>
+            <div data-index="7" class="cell"></div>
+            <div data-index="8" class="cell"></div>
+          </div>
+          <div id="status">Juega Ahora</div>
+          <button id="restart">Reiniciar</button>
+</section>
+<section id="number-guessing">
+    <h1 class="title">Adivina el numero</h1>
+    <p>
+        Hemos seleccionado un numero aleatorio entre el 1 al 10. Mira si lo puedes adivinar
+    </p>
+ 
+    <div class="form">
+        <label for="guessField">
+            Introduce un numero: 
+        </label>
+         
+        <input type="number" id="guessField"
+            class="guessField">
+         
+        <input type="submit" value="Subir Intento"
+            class="guessSubmit" id="submitGuess">
+
+            <p id="guessText">Vamos!</p>
+    </div>
+ 
+</section>
+<section id="rps">
+    <h1 class="title">Piedra Papel y Tijeras</h1>
+  <div id="choices">
+    <div id="result" class="title">
+    </div>
+        <div class="btnCont">  
+            <button id="rock" class="rpsBtn">Piedra</button>
+            <button id="paper" class="rpsBtn">Papel</button>
+            <button id="scissors" class="rpsBtn">Tijeras</button>
+        </div>
+            <button id="restartRPS" class="restartRpsBtn">Otro intento?</button>
+        
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</main>
+
+</body>
+
+</html>
